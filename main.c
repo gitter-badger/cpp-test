@@ -24,7 +24,7 @@ void macro_test_1() {
 }
 
 void macro_test_2() {
-
+	printf("%s\n", mock_STR(mock_str));
 }
 
 void print_include_chars() {

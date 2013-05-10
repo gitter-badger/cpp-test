@@ -6,5 +6,8 @@
 #define _CONS(a, b)  a##b
 #define CONS(a, b)  _CONS(a, b)
 
+// define can use to alias anything, var or func
+#define mock_STR STR
+
 #endif
 
