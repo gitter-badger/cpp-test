@@ -3,9 +3,13 @@
 #define _MT(num)  CONS(macro_test_, num)
 #define MT(num) _MT(num)
 
+const char* array[] = {
+#include "istr.h"
+};
 
 int main(char* argv) {
 	macro_test();
+	print_include_chars();
 	return 0;
 }
 
@@ -21,4 +25,11 @@ void macro_test_1() {
 
 void macro_test_2() {
 
+}
+
+void print_include_chars() {
+	int i = 0;
+	for (; i < 3; i++) {
+		printf("print_include_chars _%d_ : %s\n", i, array[i]);
+	}
 }
