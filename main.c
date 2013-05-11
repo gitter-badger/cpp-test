@@ -10,6 +10,7 @@ const char* array[] = {
 int main(char* argv) {
 	macro_test();
 	print_include_chars();
+	prefix_pch_test();
 	return 0;
 }
 
@@ -32,4 +33,9 @@ void print_include_chars() {
 	for (; i < 3; i++) {
 		printf("print_include_chars _%d_ : %s\n", i, array[i]);
 	}
+}
+
+// now you can't gcc build this file, you need to add "-include prefix.pch" to makefile or gcc -w main.c -include prefix.pch
+void prefix_pch_test() {
+	printf("out-const:  %s\n", OUT_CONST);
 }
