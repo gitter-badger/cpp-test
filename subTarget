@@ -22,3 +22,8 @@ sub2:
 
 sub3:
 		@$(MAKE) sub1
+
+
+%.o: %.c %.h
+	 gcc $< -include prefix.pch -w -o $@
+

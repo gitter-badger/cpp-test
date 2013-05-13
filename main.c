@@ -1,4 +1,5 @@
 #include "util.h"
+#include "main.h"
 
 #define _MT(num)  CONS(macro_test_, num)
 #define MT(num) _MT(num)
