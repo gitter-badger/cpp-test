@@ -19,9 +19,8 @@ sub2:
 			 echo ${type}; \
 		fi;
 
-
 sub3:
-		@$(MAKE) sub1
+		@#$(MAKE) sub1 -f subTarget
 
 
 %.o: %.c %.h
